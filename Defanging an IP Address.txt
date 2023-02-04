@@ -1,0 +1,48 @@
+Defanging an IP Address
+
+Given a valid (IPv4) IP address, return a defanged version of that IP address.
+
+A defanged IP address replaces every period "." with "[.]".
+
+ 
+
+Example 1:
+
+Input: address = "1.1.1.1"
+Output: "1[.]1[.]1[.]1"
+Example 2:
+
+Input: address = "255.100.50.0"
+Output: "255[.]100[.]50[.]0"
+
+
+
+
+
+-----------------------------------------------------------------
+------------------------------------------------------------------------
+Class Solution {
+public:
+    string defangIPaddr(string address) {
+        string temp;
+        int i=0;
+        if(address.length()<=15){
+       while(address[i]!='\0'){
+           if(address[i]=='.'){
+               
+               temp.push_back('[');
+               temp.push_back('.');
+               temp.push_back(']');
+               i++;
+           }
+           else{
+               char l=address[i];
+               temp.append(1,l);
+               i++;
+           }
+       }
+        }
+    
+       return temp; 
+    }
+};
