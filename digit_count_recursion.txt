@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+//count digits in a number using recursion
+#include <iostream>
+#include<vector>
+#include<iterator>
+using namespace std;
+long long int count=0;
+ long long int rev(long long int h){
+     
+        if(h>1){
+        count++;
+          rev(h/10);
+        }
+     // cout<<h<<" ";
+      //cout<<count;
+      return count;
+    }
+int main() {
+    long long int h=10074732454586548847648764;
+   cout<<rev(h)+1;
+    
+
+    return 0;
+}
