@@ -1,4 +1,5 @@
 // Printing string in reverse order without indexing,looping or using any builtin function
+//Here I am using recursion
 #include <stdio.h>
  void reverse(char* s){
       if(*s!='\0'){
